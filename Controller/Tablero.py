@@ -43,4 +43,4 @@ for i in range(0,16):
   # para llenar el  tablero 
   
 for i in filas:
-    lenadotablero.append(i)
+    realtablero.append(i)
