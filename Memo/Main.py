@@ -1,3 +1,4 @@
+from sunau import AUDIO_UNKNOWN_SIZE
 from turtle import exitonclick, st
 import pygame
 import os.path
@@ -166,6 +167,10 @@ def main():
     while True:
         
         Tiempo= pygame.time.get_ticks()/1000
+        if aux == Tiempo:
+            aux+=1
+            print(Tiempo)
+        #print(Tiempo)
         
         for evento in pygame.event.get():
             #print(event)
@@ -186,8 +191,9 @@ def main():
         for i in range(0, len(displaylist)):
             screen.blit(displaylist[i].image, displaylist[i].rect)
 
-        contador= Fuente.render("Tiempo; "+str(Tiempo),0(1000,800,0))
-        screen.blit(contador,(100,100))
+        contador= Fuente.render("Tiempo; "+str(Tiempo),0,(100,100,100))
+        
+        screen.blit(contador,(950,600))
         
         pygame.display.flip()
         pygame.display.update()
