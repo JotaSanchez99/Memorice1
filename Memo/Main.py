@@ -190,6 +190,7 @@ def main():
         screen.blit(contador,(100,100))
         
         pygame.display.flip()
+        pygame.display.update()
 
 
     return 0
