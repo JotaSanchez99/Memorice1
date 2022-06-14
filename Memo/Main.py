@@ -133,7 +133,10 @@ class Tarjeta(pygame.sprite.Sprite):
 #CLASE PRINCIPAL
 def main():
     screen = pygame.display.set_mode((ANCHO, ALTURA))
-    pygame.display.set_caption("Pruebas Pygame")
+    pygame.display.set_caption("Numero 13")
+    
+    Fuente = pygame.font.SysFont("Arial",31)
+    
 
     background = cargar_imagen('fondo.jpg')
     background = pygame.transform.scale(background, (ANCHO, ALTURA))
@@ -161,15 +164,15 @@ def main():
         
     aux=1
     while True:
+        
+        Tiempo= pygame.time.get_ticks()/1000
+        
         for evento in pygame.event.get():
             #print(event)
-            Tiempo= pygame.time.get_ticks/1000
-            if aux==Tiempo:
-                aux+=1
-                print Tiempo 
               
             if evento.type == pygame.QUIT:
                 sys.exit()
+                
             if evento.type == pygame.MOUSEBUTTONUP:
                 if(evento.button == 1):
                     x, y = evento.pos
@@ -184,6 +187,8 @@ def main():
             screen.blit(displaylist[i].image, displaylist[i].rect)
 
         contador= Fuente.render("Tiempo; "+str(Tiempo),0(1000,800,0))
+        screen.blit(contador,(100,100))
+        
         pygame.display.flip()
 
 
