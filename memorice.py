@@ -1,6 +1,5 @@
 #JuegoDeMemoria
 #Todas las imagenes  estan en la carpeta llamada "Imagenes"
-#Las imagenes utilizadas son W:100px H:150px.
 
 
 import wx, os, random, time
